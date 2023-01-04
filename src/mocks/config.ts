@@ -1,24 +1,30 @@
 import {Server, createServer} from 'miragejs';
+import {BASE_URL} from '../api';
 
-const BASE_URL = 'http://localhost:3000';
+const categorie1 = require('./categorie-1.json');
+const mocks = [categorie1];
 
-export const runMirage = () => {
+export const runMirage = (logging: boolean = true) => {
   if (window.server) {
     window.server.shutdown();
   }
 
   window.server = createServer({
     routes() {
-      this.namespace = 'api';
-
-      this.get('/users', () => {
-        return {
-          users: [
-            {id: 1, name: 'Bob'},
-            {id: 2, name: 'Alice'},
-          ],
-        };
-      });
+      mocks.map(mock => mockEndpoints(this, mock));
     },
   });
+  window.server.logging = logging;
+};
+
+const mockEndpoints = (server: Server, mock: any) => {
+  const {type, endpoint, data} = mock;
+
+  switch (type) {
+    case 'GET':
+      server.get(`${BASE_URL}${endpoint}`, () => {
+        return data;
+      });
+      break;
+  }
 };

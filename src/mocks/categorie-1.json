@@ -1,0 +1,19 @@
+{
+  "endpoint": "/category/1",
+  "type": "GET",
+  "data": {
+    "name": "Personal Care",
+    "subCategories": [
+      {
+        "name": "Shampoo",
+        "id": "shampo--o",
+        "productIds": [123123, 123123, 123123]
+      },
+      {
+        "name": "Handwash",
+        "id": "hand-wash",
+        "productIds": [123123, 123123, 123123]
+      }
+    ]
+  }
+}
