@@ -14,7 +14,13 @@ const api = axios.create({
 interface Category {
   id: number;
   name: string;
-  description: string;
+  subCategories: SubCategory[];
+}
+
+export interface SubCategory {
+  name: string;
+  id: string;
+  productIds: number[];
 }
 
 const useGetCategories = (id: number) => {
@@ -24,9 +30,7 @@ const useGetCategories = (id: number) => {
     api.get<Category>(route).then(res => res.data),
   );
 
-  const categories = data ?? [];
-
-  return {categories, isLoading, error};
+  return {categories: data, isLoading, error};
 };
 
 export {BASE_URL, api, useGetCategories};
