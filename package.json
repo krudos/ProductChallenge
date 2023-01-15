@@ -8,6 +8,7 @@
     "ios13": "react-native run-ios --simulator=\"iPhone 13\"",
     "start": "react-native start",
     "test": "jest",
+    "adb": "adb reverse tcp:8081 tcp:8081",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
