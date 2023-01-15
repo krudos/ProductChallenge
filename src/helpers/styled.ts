@@ -2,7 +2,8 @@ import * as styledComponents from 'styled-components/native';
 
 const theme: styledComponents.DefaultTheme = {
   colors: {
-    grey: '#f6f6f6',
+    grey: '#a0a0a0',
+    darkGrey: '#414141',
     black: '#1c1c1c',
     white: '#ffffff',
     softGrey: '#e3e3e3',

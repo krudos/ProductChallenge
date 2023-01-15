@@ -4,6 +4,7 @@ declare module 'styled-components/native' {
   export interface DefaultTheme {
     colors: {
       grey: string;
+      darkGrey: string;
       black: string;
       white: string;
       softGrey: string;
@@ -11,4 +12,3 @@ declare module 'styled-components/native' {
     };
   }
 }
- 

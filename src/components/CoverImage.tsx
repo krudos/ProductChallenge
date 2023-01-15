@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {Text, View} from 'react-native';
-import {BackgroundImage, Container} from './CoverImage.styled';
+import {getImage} from '../mocks/config';
+import {BackgroundImage, Title} from './CoverImage.styled';
 
 interface ProductCardProps {
   name: string;
@@ -8,10 +8,9 @@ interface ProductCardProps {
 }
 const CoverImage: FC<ProductCardProps> = ({name, image}) => {
   return (
-    <Container>
-      <Text>{name}</Text>
-      <BackgroundImage source={{uri: image}} />
-    </Container>
+    <BackgroundImage source={getImage(image)}>
+      <Title>{name}</Title>
+    </BackgroundImage>
   );
 };
 

@@ -7,12 +7,17 @@
       {
         "name": "Shampoo",
         "id": "shampo--o",
-        "productIds": [123123, 123123, 123123]
+        "productIds": [100, 101, 102]
       },
       {
         "name": "Handwash",
         "id": "hand-wash",
-        "productIds": [123123, 123123, 123123]
+        "productIds": [200, 201, 202]
+      },
+      {
+        "name": "Fragances",
+        "id": "fragances",
+        "productIds": [300, 301, 302]
       }
     ]
   }

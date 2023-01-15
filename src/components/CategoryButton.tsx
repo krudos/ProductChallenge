@@ -7,10 +7,13 @@ interface CategoryButtonProps {
   selected: boolean;
   onPress?: () => void;
 }
-const CategoryButton: FC<CategoryButtonProps> = ({id, title, selected}) => {
-  console.log('selected', selected);
+const CategoryButton: FC<CategoryButtonProps> = ({
+  title,
+  selected,
+  onPress,
+}) => {
   return (
-    <Container key={id} selected={selected}>
+    <Container selected={selected} onPress={onPress}>
       <Title selected={selected}>{title}</Title>
     </Container>
   );
