@@ -5,8 +5,11 @@ export const BackgroundImage = styled.ImageBackground`
   height: 250px;
   justify-content: center;
   border-radius: 8px;
-  flex: 1;
+
   overflow: hidden;
+`;
+
+export const Container = styled.View`
   margin-bottom: 24px;
 `;
 

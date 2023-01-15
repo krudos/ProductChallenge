@@ -4,7 +4,7 @@
   "data": {
     "items": [
       {
-        "id": 200,
+        "id": 100,
         "name": "Marvis Whitening mint tooth paste",
         "brand": {
           "name": "Marvis"
@@ -12,7 +12,7 @@
         "price": 9.95
       },
       {
-        "id": 201,
+        "id": 101,
         "name": "Head and shoulders",
         "brand": {
           "name": "P&G"
@@ -20,7 +20,7 @@
         "price": 4.95
       },
       {
-        "id": 202,
+        "id": 102,
         "name": "Dove shampoo",
         "brand": {
           "name": "P&G"

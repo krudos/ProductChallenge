@@ -6,6 +6,12 @@ export const SafeArea = styled(SafeAreaView)`
   background-color: ${props => props.theme.colors?.white};
 `;
 
+export const Root = styled.View`
+  flex: 1;
+  margin-left: 16px;
+  margin-right: 16px;
+`;
+
 export const Scroll = styled.ScrollView.attrs({
   contentContainerStyle: {
     marginLeft: 16,

@@ -1,0 +1,32 @@
+{
+  "endpoint": "/product/sub-category/fragance",
+  "type": "GET",
+  "data": {
+    "items": [
+      {
+        "id": 300,
+        "name": "Terre d'Hermes",
+        "brand": {
+          "name": "Hermes"
+        },
+        "price": 119.95
+      },
+      {
+        "id": 301,
+        "name": "Wood",
+        "brand": {
+          "name": "Tom Ford"
+        },
+        "price": 144.95
+      },
+      {
+        "id": 302,
+        "name": "Sauvage",
+        "brand": {
+          "name": "Dior"
+        },
+        "price": 133.95
+      }
+    ]
+  }
+}

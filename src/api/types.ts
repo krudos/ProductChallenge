@@ -1,6 +1,7 @@
 export interface Category {
   id: number;
   name: string;
+  image: string;
   subCategories: SubCategory[];
 }
 
@@ -18,5 +19,5 @@ export interface Product {
   name: string;
   brand: Brand;
   price: number;
-  id: string
+  id: string;
 }

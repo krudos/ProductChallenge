@@ -3,15 +3,15 @@ import {AnyFactories, AnyModels, AnyResponse} from 'miragejs/-types';
 import {RouteHandler} from 'miragejs/server';
 import {BASE_URL} from '../api';
 
-const personalCare = require('./image/personal-care.png');
 const categorie1 = require('./categorie-1.json');
-
 const subCategorieShampoo = require('./subcategorie-Shampoo.json');
 const subCategorieHandwash = require('./subcategorie-Handwash.json');
+const subCategorieFragance = require('./subcategorie-Fragance.json');
 
 const subCategories = {
   'shampo--o': subCategorieShampoo,
   'hand-wash': subCategorieHandwash,
+  fragances: subCategorieFragance,
 };
 
 const mocks = [categorie1];
@@ -66,18 +66,37 @@ const subCategoryEndpoint: RouteHandler<
     return allProducts;
   }
 
-  return subCategories[id];
+  return subCategories[id].data.items;
 };
 
 export const getImage = (url: string) => {
   const id = url.toString().includes('/')
     ? url.toString().split('/').pop()
-    : '';
+    : url.toString();
 
   switch (id) {
+    case '100':
+      return require('./image/100.png');
+    case '101':
+      return require('./image/101.png');
+    case '102':
+      return require('./image/102.png');
+    case '200':
+      return require('./image/200.png');
+    case '201':
+      return require('./image/201.png');
+    case '202':
+      return require('./image/202.png');
+
+    case '300':
+      return require('./image/300.png');
+    case '301':
+      return require('./image/301.png');
+    case '302':
+      return require('./image/302.png');
+
     case 'personal-care':
-      return personalCare;
     default:
-      return personalCare;
+      return require('./image/personal-care.png');
   }
 };
